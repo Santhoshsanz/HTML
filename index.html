@@ -20,6 +20,7 @@
         <script src="notify.js"></script>
         <script src="index.js"></script>    
         <link rel="stylesheet" href="animate.css"> 
+        <link rel="stylesheet" href="hamburgerMenu.css"> 
     </head>
     <body class="overf"> 
         <div class="loader">
@@ -32,38 +33,33 @@
             <span id="logo">
                     <img src="images/logo.svg" id="">Origami Theme
             </span>
-            <div class="menuLink">
-                    <ul><li><a><i class="fa fa-bars"></i></a></li></ul>
+            <div id="toggelMenu">
+                    <ul><li><a><div class="bt-menu-trigger">
+                            <span></span>
+                          </div></i></a></li></ul>
             </div>
            
             <div class="pull-right">||Profile||Search</div>
         </header>
-       <aside id="navbar">
-           <!-- <div class="menu">
-                <span>Menu</span>
-                <i class="fa fa-arrow-left" onclick="toggleMenu()"></i>
-           </div> -->
            <div id="menuLink">
                 <ul>
-                        <li><i class="fa fa-home"></i><a>DashBoard</a></li>
-                        <li><i class="fa fa-home"></i><a>Client A</a>
+                        <li draggable="true" ondragover="allowDrop(event)"><i class="fa fa-home"></i><a href="#">DashBoard</a></li>
+                        <li draggable="true"><i class="fa fa-address-book"></i><a>Client A</a>
                          <ul>
-                             <li><a>Client A Sub</a></li>
-                             <li><a>Client A Sub</a></li>
+                             <li><a href="#">Client A Sub</a></li>
+                             <li><a href="#">Client A Sub</a></li>
                          </ul>
                      </li>
-                        <li><i class="fa fa-home"></i><a>Client B</a>
+                        <li draggable="true" ondragover="allowDrop(event)"><i class="fa fa-superpowers"></i><a href="#">Client B</a>
                          <ul>
-                                 <li><a>Client A Sub</a></li>
-                                 <li><a>Client ASub </a></li>
+                                 <li><a href="#">Client A Sub</a></li>
+                                 <li><a href="#">Client A Sub </a></li>
                              </ul>
                      </li>
-                        <li><i class="fa fa-home"></i><a>Client C</a></li>
-                        <li><i class="fa fa-home"></i><a>Client D</a></li>
+                        <li draggable="true" ondragover="allowDrop(event)"><i class="fa fa-telegram"></i><a href="#">Client C</a></li>
+                        <li draggable="true" ondragover="allowDrop(event)"><i class="fa fa-bell"></i><a href="#">Client D</a></li>
                     </ul>
            </div>
-           
-        </aside>
        <div class="container-fluid">
            <div class="main">
                 <div id="content">
@@ -74,7 +70,7 @@
                             </div>
                             <div class="row">
                             <div class="col col-md-8">
-                                <div class="card " id="overAll">
+                                <div class="card " id="overAll" ondrop="drop(event)">
                                     <div class="card-title"><h3>OverAll <strong>Chart</strong></h3></div>
                                     <div class="card-body"> 
                                      <div id="lineheat"></div>
@@ -324,7 +320,12 @@
            </div>
        </div>
        <div id="footer">
-           Footer Data
+           <img src="images/logo.svg">
+           <div class="pull-right">
+                <h4>Contact</h4>
+                <h5>Origami</h5> <small>Street Sesame</small>
+                <small>&copy;&reg; 2017</small>          
+           </div>
        </div>
     </body>
 </html>

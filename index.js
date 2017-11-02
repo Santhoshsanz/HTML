@@ -1,14 +1,15 @@
 $(document).ready(function(){
     setTimeout(function(){
          $(".loader").fadeOut(2000);
-         $("body").toggleClass("overf");
          setTimeout(function(){
+            $("body").toggleClass("overf");
             $("#overAll").addClass("animated slideInLeft")
             $("#dataT").addClass("animated slideInLeft")
             $("#alertBox").addClass("animated slideInDown")
             $("#worldMap").addClass("animated slideInUp")
-         },500)
+         },200)
      },3000);
+    initialize();
 loadWorld();
 loadLineHeat();
 alertLoad();
@@ -631,4 +632,20 @@ upArrow.onclick = function () {
     upArrow.style = "display:none";
     downArrow.style = "display:block";
 };
+}
+initialize=function(){
+    var button = document.querySelector('.bt-menu-trigger');
+    button.addEventListener('click', function (){
+      button.classList.toggle('bt-menu-open');
+      $("#menuLink").toggleClass("close-m");
+      $(".main").toggleClass("close-ma");
+    });
+}
+
+allowDrop=function(event){
+    event.preventDefault();
+}
+ondrop=function(event){
+    debugger;
+    $("#overAll").addClass("animated wobble")
 }

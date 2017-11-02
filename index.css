@@ -8,20 +8,68 @@ header{
      /* float: left; */
      list-style: none  
 }
-.menuLink{
+#toggelMenu{
     margin-left: 165px;
 }
-.menuLink li{
-    height: 50px;
-    padding: 5px;
+.close-m{
+    width:34px!important;
 }
+#toggelMenu li{
+    min-height: 50px;
+    float: left;
+}
+#menuLink a:active {
+    padding-left: 5px;
+    border-left: 5px solid #1bbae1;
+    background: rgba(0,0,0,.3);
+}
+#menuLink{
+    width:165px;
+    -webkit-transition: width 1s; /* Safari */
+    transition: width 1s;
+    -moz-transition: width 1s;
+}
+#toggelMenu ul{
+    padding: 0px;
+    float: left;
+    margin: 0px;
+}
+#menuLink li:hover{
+    border-left: 5px;
+    border-color:  cyan;
+}
+li a{
+    color:white;
+    padding: 5px 0px;
+}
+li a:hover{
+    color:white!important;
+}
+
+
+li>ul{
+    display: none;
+}
+#toggelMenu a{
+        display: block;
+        min-width: 50px;
+        padding: 5px 7px;
+        line-height: 40px;
+        text-align: center;
+        color: crimson;
+        position: relative;
+}
+#toggelMenu i{
+    font-size: x-large
+}
+
 #menuLink{    
     position: fixed;
     top: 0;
-    height: 1005;
+    height: 100%;
     background-color: #394263;
     color: white;
-    font-size: 18px;
+    font-size: 15px;
     left: 0;
     padding-top: 75px;
 }
@@ -30,7 +78,7 @@ header{
     padding-left: 0px;
 }
 #menuLink>ul>li{
-   padding:0px 10px 0px 10px;
+   padding:18px 10px 0px 10px;
 }
 #menuLink i{
     margin-right: 10px;
@@ -50,12 +98,29 @@ li> ul{
 margin-left: 150px;
 min-height: 80vh;
 padding: 10px;
+-webkit-transition: margin-left 1s; /* Safari */
+transition: margin-left 1s;
+-moz-transition: margin-left 1s;
 }
 header{
     height: 50px;   
 }
+.close-ma{
+    margin-left:30px;
+}
 #footer{
-    margin-left: 100px; 
+    overflow: auto;
+    /* margin-left: 165px;  */
+    padding: 10px;
+    background-color:darkcyan;
+    color: white;
+    background-image: -webkit-linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.0)), url(images/noise.jpg);
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0,0)), url(images/noise.jpg);
+    background-repeat: repeat-x, repeat;
+    background-size: 100px 15px, 140px 140px;
+}
+#footer img{
+    width:40px;
 }
 .card{
     background: #fff;
@@ -87,6 +152,7 @@ padding: 10px;
     background: rgba(0,0,0,.15);
     color: white;
     font-size: 16px;
+    z-index: 1;
 }
 #logo img{
     width:40px;
@@ -95,7 +161,7 @@ padding: 10px;
     overflow: hidden;
 }
 .loader{
-    position: absolute;
+    position: fixed;
     z-index: 5;
     width: 100%;
     height: 100%;
@@ -185,7 +251,7 @@ padding: 10px;
     margin: 0;
     padding: 0;
     position: relative;
-    transition: all 0.5s linear;
+    transition: all 0.1s linear;
     top:0
 }
 
