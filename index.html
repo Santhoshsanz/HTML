@@ -18,7 +18,8 @@
         <script src="https://www.amcharts.com/lib/3/themes/light.js"></script> 
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
         <script src="notify.js"></script>
-        <script src="index.js"></script>     
+        <script src="index.js"></script>    
+        <link rel="stylesheet" href="animate.css"> 
     </head>
     <body class="overf"> 
         <div class="loader">
@@ -73,7 +74,7 @@
                             </div>
                             <div class="row">
                             <div class="col col-md-8">
-                                <div class="card">
+                                <div class="card " id="overAll">
                                     <div class="card-title"><h3>OverAll <strong>Chart</strong></h3></div>
                                     <div class="card-body"> 
                                      <div id="lineheat"></div>
@@ -82,7 +83,7 @@
                                 
                             </div>
                             <div class="col col-md-4">
-                                 <div class="card">
+                                 <div class="card " id="alertBox">
                                          <div class="card-title"><h3>Alert <strong>Messages</strong></h3></div>
                                          <div class="card-body" style="background-color:rgba(241, 94, 34,0.7)"> 
                                                 <div class="box">
@@ -227,8 +228,6 @@
                                                             
                                                         </div>
                                                         </ul>
-                                                        
-                                                        <script src="JavaScript/timeline-V2.js"></script>
                                                     </div>
                                                             
                                          </div>
@@ -237,7 +236,7 @@
                         </div>
                         <div class="row"><!-- Class Row-->
                              <div class="col col-md-6">   
-                                <div class="card">
+                                <div class="card " id="dataT">
                                      <div class="card-title"><h3>Raw <strong>Data</strong></h3></div>
                                      <div class="card-body"> 
                                             <table class="table">
@@ -313,7 +312,7 @@
                                      </div>
                                 </div></div>
                             <div class="col col-md-6">   
-                                 <div class="card">
+                                 <div class="card" id="worldMap">
                                      <div class="card-title"><h3>World <strong>Map</strong></h3></div>
                                      <div class="card-body"> 
                                       <div id="world-map"></div>

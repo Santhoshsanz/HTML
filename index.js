@@ -1,8 +1,14 @@
 $(document).ready(function(){
     setTimeout(function(){
          $(".loader").fadeOut(2000);
-         $("body").toggleClass("overf")
-     },0);
+         $("body").toggleClass("overf");
+         setTimeout(function(){
+            $("#overAll").addClass("animated slideInLeft")
+            $("#dataT").addClass("animated slideInLeft")
+            $("#alertBox").addClass("animated slideInDown")
+            $("#worldMap").addClass("animated slideInUp")
+         },500)
+     },3000);
 loadWorld();
 loadLineHeat();
 alertLoad();
