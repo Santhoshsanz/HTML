@@ -1,0 +1,331 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="stylesheet" href="index.css"> -->
+        <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+        <script src="oridomi.min.js"></script>  
+        <link rel="stylesheet" href=" https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="index.css">
+        <!-- <script src="hc/code/highcharts.js"></script>   -->
+        <!-- <script src="hm/code/highmaps.js"></script>      -->
+        <script src="https://www.amcharts.com/lib/3/ammap.js"></script>
+        <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+        <script src="https://www.amcharts.com/lib/3/serial.js"></script>
+        <script src="https://www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
+        <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+        <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+        <script src="https://www.amcharts.com/lib/3/themes/light.js"></script> 
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+        <script src="notify.js"></script>
+        <script src="index.js"></script>     
+    </head>
+    <body class="overf"> 
+        <div class="loader">
+            <div class="loader-content">
+                    <img src="images/4-origami-logo-design.gif">
+            </div>
+            
+        </div>
+        <header>
+            <span id="logo">
+                    <img src="images/logo.svg" id="">Origami Theme
+            </span>
+            <div class="menuLink">
+                    <ul><li><a><i class="fa fa-bars"></i></a></li></ul>
+            </div>
+           
+            <div class="pull-right">||Profile||Search</div>
+        </header>
+       <aside id="navbar">
+           <!-- <div class="menu">
+                <span>Menu</span>
+                <i class="fa fa-arrow-left" onclick="toggleMenu()"></i>
+           </div> -->
+           <div id="menuLink">
+                <ul>
+                        <li><i class="fa fa-home"></i><a>DashBoard</a></li>
+                        <li><i class="fa fa-home"></i><a>Client A</a>
+                         <ul>
+                             <li><a>Client A Sub</a></li>
+                             <li><a>Client A Sub</a></li>
+                         </ul>
+                     </li>
+                        <li><i class="fa fa-home"></i><a>Client B</a>
+                         <ul>
+                                 <li><a>Client A Sub</a></li>
+                                 <li><a>Client ASub </a></li>
+                             </ul>
+                     </li>
+                        <li><i class="fa fa-home"></i><a>Client C</a></li>
+                        <li><i class="fa fa-home"></i><a>Client D</a></li>
+                    </ul>
+           </div>
+           
+        </aside>
+       <div class="container-fluid">
+           <div class="main">
+                <div id="content">
+                        <div class="row"> <!-- Class Row-->
+                            <div class="col col-md-8 col-md-offset-4">
+                                Quick Stats  
+                            </div>
+                            </div>
+                            <div class="row">
+                            <div class="col col-md-8">
+                                <div class="card">
+                                    <div class="card-title"><h3>OverAll <strong>Chart</strong></h3></div>
+                                    <div class="card-body"> 
+                                     <div id="lineheat"></div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="col col-md-4">
+                                 <div class="card">
+                                         <div class="card-title"><h3>Alert <strong>Messages</strong></h3></div>
+                                         <div class="card-body" style="background-color:rgba(241, 94, 34,0.7)"> 
+                                                <div class="box">
+                                                        <ul id="first-list">
+                                                            <li>
+                                                                <span></span>
+                                                                <div class="title">Alert Message</div>
+                                                                <div class="info">Some Message</div>
+                                                                <div class="name">- Xyz -</div>
+                                                                <div class="time">
+                                                                    <span>JUN, 17<sup>th</sup></span>
+                                                                    <span>12:00 AM</span>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                    <span></span>
+                                                                    <div class="title">Alert Message</div>
+                                                                    <div class="info">Some Message</div>
+                                                                    <div class="name">- Xyz -</div>
+                                                                    <div class="time">
+                                                                        <span>JUN, 17<sup>th</sup></span>
+                                                                        <span>12:00 AM</span>
+                                                                    </div>
+                                                            <div class="arrow" id="btn1">
+                                                        
+                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 284.929 284.929" style="enable-background:new 0 0 284.929 284.929;" xml:space="preserve">
+                                                                <g>
+                                                                    <g>
+                                                                        <path d="M135.899,167.877c1.902,1.902,4.093,2.851,6.567,2.851s4.661-0.948,6.562-2.851L282.082,34.829    c1.902-1.903,2.847-4.093,2.847-6.567s-0.951-4.665-2.847-6.567L267.808,7.417c-1.902-1.903-4.093-2.853-6.57-2.853    c-2.471,0-4.661,0.95-6.563,2.853L142.466,119.622L30.262,7.417c-1.903-1.903-4.093-2.853-6.567-2.853    c-2.475,0-4.665,0.95-6.567,2.853L2.856,21.695C0.95,23.597,0,25.784,0,28.262c0,2.478,0.953,4.665,2.856,6.567L135.899,167.877z" fill="#FFFFFF"/>
+                                                                        <path d="M267.808,117.053c-1.902-1.903-4.093-2.853-6.57-2.853c-2.471,0-4.661,0.95-6.563,2.853L142.466,229.257L30.262,117.05    c-1.903-1.903-4.093-2.853-6.567-2.853c-2.475,0-4.665,0.95-6.567,2.853L2.856,131.327C0.95,133.23,0,135.42,0,137.893    c0,2.474,0.953,4.665,2.856,6.57l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854l133.054-133.046    c1.902-1.903,2.847-4.093,2.847-6.565c0-2.474-0.951-4.661-2.847-6.567L267.808,117.053z" fill="#FFFFFF"/>
+                                                                    </g>
+                                                                </g>
+                                                                <g>
+                                                                </g>
+                                                                <g>
+                                                                </g>
+                                                                <g>
+                                                                </g>
+                                                                <g>
+                                                                </g>
+                                                                <g>
+                                                                </g>
+                                                                <g>
+                                                                </g>
+                                                                <g>
+                                                                </g>
+                                                                <g>
+                                                                </g>
+                                                                <g>
+                                                                </g>
+                                                                <g>
+                                                                </g>
+                                                                <g>
+                                                                </g>
+                                                                <g>
+                                                                </g>
+                                                                <g>
+                                                                </g>
+                                                                <g>
+                                                                </g>
+                                                                <g>
+                                                                </g>
+                                                            </svg>
+                                                            
+                                                        </div> 
+                                                        </ul>
+                                                            
+                                                           
+                                                        
+                                                        <ul id="second-list">
+                                                            <li>
+                                                                    <span></span>
+                                                                    <div class="title">Alert Message</div>
+                                                                    <div class="info">Some Message</div>
+                                                                    <div class="name">- Xyz -</div>
+                                                                    <div class="time">
+                                                                        <span>JUN, 17<sup>th</sup></span>
+                                                                        <span>12:00 AM</span>
+                                                                    </div>
+                                                            </li>
+                                                            <li>
+                                                                    <span></span>
+                                                                    <div class="title">Alert Message</div>
+                                                                    <div class="info">Some Message</div>
+                                                                    <div class="name">- Xyz -</div>
+                                                                    <div class="time">
+                                                                        <span>JUN, 17<sup>th</sup></span>
+                                                                        <span>12:00 AM</span>
+                                                                    </div>
+                                                            </li>
+                                                            <li>
+                                                                    <span></span>
+                                                                    <div class="title">Alert Message</div>
+                                                                    <div class="info">Some Message</div>
+                                                                    <div class="name">- Xyz -</div>
+                                                                    <div class="time">
+                                                                        <span>JUN, 17<sup>th</sup></span>
+                                                                        <span>12:00 AM</span>
+                                                                    </div>
+                                                            </li>
+                                                            
+                                                            <div class="arrow" id="btn2">
+                                                        
+                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 284.929 284.929" style="enable-background:new 0 0 284.929 284.929;" xml:space="preserve">
+                                                                <g>
+                                                                    <g>
+                                                                        <path d="M135.899,167.877c1.902,1.902,4.093,2.851,6.567,2.851s4.661-0.948,6.562-2.851L282.082,34.829    c1.902-1.903,2.847-4.093,2.847-6.567s-0.951-4.665-2.847-6.567L267.808,7.417c-1.902-1.903-4.093-2.853-6.57-2.853    c-2.471,0-4.661,0.95-6.563,2.853L142.466,119.622L30.262,7.417c-1.903-1.903-4.093-2.853-6.567-2.853    c-2.475,0-4.665,0.95-6.567,2.853L2.856,21.695C0.95,23.597,0,25.784,0,28.262c0,2.478,0.953,4.665,2.856,6.567L135.899,167.877z" fill="#FFFFFF"/>
+                                                                        <path d="M267.808,117.053c-1.902-1.903-4.093-2.853-6.57-2.853c-2.471,0-4.661,0.95-6.563,2.853L142.466,229.257L30.262,117.05    c-1.903-1.903-4.093-2.853-6.567-2.853c-2.475,0-4.665,0.95-6.567,2.853L2.856,131.327C0.95,133.23,0,135.42,0,137.893    c0,2.474,0.953,4.665,2.856,6.57l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854l133.054-133.046    c1.902-1.903,2.847-4.093,2.847-6.565c0-2.474-0.951-4.661-2.847-6.567L267.808,117.053z" fill="#FFFFFF"/>
+                                                                    </g>
+                                                                </g>
+                                                                <g>
+                                                                </g>
+                                                                <g>
+                                                                </g>
+                                                                <g>
+                                                                </g>
+                                                                <g>
+                                                                </g>
+                                                                <g>
+                                                                </g>
+                                                                <g>
+                                                                </g>
+                                                                <g>
+                                                                </g>
+                                                                <g>
+                                                                </g>
+                                                                <g>
+                                                                </g>
+                                                                <g>
+                                                                </g>
+                                                                <g>
+                                                                </g>
+                                                                <g>
+                                                                </g>
+                                                                <g>
+                                                                </g>
+                                                                <g>
+                                                                </g>
+                                                                <g>
+                                                                </g>
+                                                            </svg>
+                                                            
+                                                        </div>
+                                                        </ul>
+                                                        
+                                                        <script src="JavaScript/timeline-V2.js"></script>
+                                                    </div>
+                                                            
+                                         </div>
+                                     </div>
+                            </div>
+                        </div>
+                        <div class="row"><!-- Class Row-->
+                             <div class="col col-md-6">   
+                                <div class="card">
+                                     <div class="card-title"><h3>Raw <strong>Data</strong></h3></div>
+                                     <div class="card-body"> 
+                                            <table class="table">
+                                                <thead>
+                                                        <tr>
+                                                                <th>Alert Name</th>
+                                                                <th>Status</th>
+                                                                <th>Completion</th>
+                                                                <th>Handled by</th>
+                                                            </tr>
+                                                </thead>
+                                                <tr>
+                                                    <td>XYZ</td>
+                                                    <td><span class="label label-primary">Pending</span></td>
+                                                    <td><div class="progress">
+                                                            <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                                            aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                                            </div>
+                                                          </div></td>
+                                                    <td>ABC</td>
+                                                </tr>
+                                                <tr>
+                                                        <td>XYZ</td>
+                                                        <td><span class="label label-default">Pending</span></td>
+                                                        <td><div class="progress">
+                                                                <div class="progress-bar progress-bar-accent" role="progressbar " aria-valuenow="70"
+                                                                aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                                                                  
+                                                                </div>
+                                                              </div></td>
+                                                        <td>ABC</td>
+                                                    </tr> <tr>
+                                                            <td>XYZ</td>
+                                                            <td><span class="label label-danger">Pending</span></td>
+                                                            <td><div class="progress">
+                                                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="70"
+                                                                    aria-valuemin="0" aria-valuemax="100" style="width:20%">
+                                                                      
+                                                                    </div>
+                                                                  </div></td>
+                                                            <td>ABC</td>
+                                                        </tr> <tr>
+                                                                <td>XYZ</td>
+                                                                <td><span class="label label-primary">Pending</span></td>
+                                                                <td><div class="progress">
+                                                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="70"
+                                                                        aria-valuemin="0" aria-valuemax="100" style="width:30%">
+                                                                        
+                                                                        </div>
+                                                                      </div></td>
+                                                                <td>ABC</td>
+                                                            </tr> <tr>
+                                                                    <td>XYZ</td>
+                                                                    <td><span class="label label-warning">Pending</span></td>
+                                                                    <td><div class="progress">
+                                                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="70"
+                                                                            aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                                                            </div>
+                                                                          </div></td>
+                                                                    <td>ABC</td>
+                                                                </tr>
+                                                                <tr>
+                                                                        <td>XYZ</td>
+                                                                        <td><span class="label label-warning">Pending</span></td>
+                                                                        <td><div class="progress">
+                                                                                <div class="progress-bar progress-bar-accent" role="progressbar" aria-valuenow="70"
+                                                                                aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                                                                                </div>
+                                                                              </div></td>
+                                                                        <td>ABC</td>
+                                                                    </tr>
+                                            </table>
+                                     </div>
+                                </div></div>
+                            <div class="col col-md-6">   
+                                 <div class="card">
+                                     <div class="card-title"><h3>World <strong>Map</strong></h3></div>
+                                     <div class="card-body"> 
+                                      <div id="world-map"></div>
+                                     </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+           </div>
+       </div>
+       <div id="footer">
+           Footer Data
+       </div>
+    </body>
+</html>
