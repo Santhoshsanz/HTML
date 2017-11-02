@@ -1,14 +1,14 @@
 $(document).ready(function(){
     setTimeout(function(){
-         $(".loader").fadeOut(2000);
+         $(".loader").fadeOut(1500);
          setTimeout(function(){
             $("body").toggleClass("overf");
             $("#overAll").addClass("animated slideInLeft")
-            $("#dataT").addClass("animated slideInLeft")
-            $("#alertBox").addClass("animated slideInDown")
-            $("#worldMap").addClass("animated slideInUp")
+            $("#dataT").addClass("animated slideInRight")
+            $("#alertBox").addClass("animated slideInRight")
+            $("#worldMap").addClass("animated slideInLeft")
          },200)
-     },3000);
+     },5000);
     initialize();
 loadWorld();
 loadLineHeat();
@@ -634,6 +634,12 @@ upArrow.onclick = function () {
 };
 }
 initialize=function(){
+    document.getElementById("test").addEventListener("drop",function(){
+        debugger;
+        $("#overAll").removeClass("animated SlideInLeft")
+        $("#overAll").addClass("animated wobble")
+    })
+
     var button = document.querySelector('.bt-menu-trigger');
     button.addEventListener('click', function (){
       button.classList.toggle('bt-menu-open');
@@ -645,7 +651,5 @@ initialize=function(){
 allowDrop=function(event){
     event.preventDefault();
 }
-ondrop=function(event){
-    debugger;
-    $("#overAll").addClass("animated wobble")
-}
+
+

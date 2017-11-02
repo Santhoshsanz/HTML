@@ -39,7 +39,7 @@
                           </div></i></a></li></ul>
             </div>
            
-            <div class="pull-right">||Profile||Search</div>
+            <div class="pull-right"></div>
         </header>
            <div id="menuLink">
                 <ul>
@@ -64,14 +64,43 @@
            <div class="main">
                 <div id="content">
                         <div class="row"> <!-- Class Row-->
-                            <div class="col col-md-8 col-md-offset-4">
-                                Quick Stats  
+                            <div class="col col-md-10 col-md-offset-2">
+                                <div class="col col-md-4">
+                                    <div class="simple">
+                                        <div class="simple-icon">
+                                                <i class="fa fa-telegram" style="color:blueviolet"></i>                                                
+                                        </div>
+                                        <div class="simple-content">
+                                            <h3>Views</h3>
+                                        </div>
+                                    </div>
+                                    </div> 
+                                    <div class="col col-md-4">
+                                            <div class="simple">
+                                                    <div class="simple-icon">
+                                                            <i class="fa fa-telegram"  style="color:coral"></i>                                                
+                                                    </div>
+                                                    <div class="simple-content">
+                                                        <h3>Alerts</h3>
+                                                    </div>
+                                                </div>
+                                        </div> 
+                                        <div class="col col-md-4">
+                                                <div class="simple">
+                                                        <div class="simple-icon">
+                                                                <i class="fa fa-telegram"  style="color:darkolivegreen"></i>                                                
+                                                        </div>
+                                                        <div class="simple-content">
+                                                            <h3>Xyz</h3>
+                                                        </div>
+                                                    </div>
+                                            </div>  
                             </div>
                             </div>
                             <div class="row">
                             <div class="col col-md-8">
-                                <div class="card " id="overAll" ondrop="drop(event)">
-                                    <div class="card-title"><h3>OverAll <strong>Chart</strong></h3></div>
+                                <div class="card " id="overAll" >
+                                    <div class="card-title" id="test"><h3>OverAll <strong>Chart</strong></h3></div>
                                     <div class="card-body"> 
                                      <div id="lineheat"></div>
                                     </div>
@@ -80,7 +109,7 @@
                             </div>
                             <div class="col col-md-4">
                                  <div class="card " id="alertBox">
-                                         <div class="card-title"><h3>Alert <strong>Messages</strong></h3></div>
+                                         <div class="card-title" ><h3>Alert <strong>Messages</strong></h3></div>
                                          <div class="card-body" style="background-color:rgba(241, 94, 34,0.7)"> 
                                                 <div class="box">
                                                         <ul id="first-list">
@@ -320,7 +349,6 @@
            </div>
        </div>
        <div id="footer">
-           <img src="images/logo.svg">
            <div class="pull-right">
                 <h4>Contact</h4>
                 <h5>Origami</h5> <small>Street Sesame</small>
